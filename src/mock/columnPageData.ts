@@ -1,11 +1,11 @@
-import Image1 from "../assets/column-1.png"
-import Image2 from "../assets/column-2.png"
-import Image3 from "../assets/column-3.png"
-import Image4 from "../assets/column-4.png"
-import Image5 from "../assets/column-5.png"
-import Image6 from "../assets/column-6.png"
-import Image7 from "../assets/column-7.png"
-import Image8 from "../assets/column-8.png"
+import Image1 from "../assets/images/column-1.png"
+import Image2 from "../assets/images/column-2.png"
+import Image3 from "../assets/images/column-3.png"
+import Image4 from "../assets/images/column-4.png"
+import Image5 from "../assets/images/column-5.png"
+import Image6 from "../assets/images/column-6.png"
+import Image7 from "../assets/images/column-7.png"
+import Image8 from "../assets/images/column-8.png"
 
 export const postListData = [
   {

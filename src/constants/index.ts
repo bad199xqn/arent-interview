@@ -7,6 +7,10 @@ import {
 } from "@/components/Icons";
 import React from "react";
 
+import RecommendImg1 from "../assets/images/MyRecommend-1.png";
+import RecommendImg2 from "../assets/images/MyRecommend-2.png";
+import RecommendImg3 from "../assets/images/MyRecommend-3.png";
+
 export const DATETIME_FORMAT = "YYYY.MM.DD HH:mm";
 
 export const FOOTER_ITEMS = [
@@ -72,6 +76,27 @@ export const COLUMN_PAGE_NAVIGATE_BUTTONS = [
   {
     engTitle: "RECOMMENDED HEALTH",
     jpTitle: "健康",
+    direct: "",
+  },
+];
+
+export const RECORD_PAGE_NAVIGATE_BUTTONS = [
+  {
+    engTitle: "BODY RECORD",
+    jpTitle: "自分のカラダの記録",
+    image: RecommendImg1,
+    direct: "",
+  },
+  {
+    engTitle: "MY EXERCISE",
+    jpTitle: "自分の運動の記録",
+    image: RecommendImg2,
+    direct: "",
+  },
+  {
+    engTitle: "MY DIARY",
+    jpTitle: "自分の日記",
+    image: RecommendImg3,
     direct: "",
   },
 ];

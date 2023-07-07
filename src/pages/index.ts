@@ -1,1 +1,2 @@
-export * from "./Column";
+export * from "./column";
+export * from "./record"

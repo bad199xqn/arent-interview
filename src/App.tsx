@@ -1,11 +1,12 @@
-import "@/styles/tailwind.css"
-import { Column } from "@/pages"
+import "@/styles/tailwind.css";
+import { RecordPage } from "@/pages";
 
 function App() {
 
   return (
     <>
-      <Column />
+      {/* <ColumnPage /> */}
+      <RecordPage />
     </>
   )
 }

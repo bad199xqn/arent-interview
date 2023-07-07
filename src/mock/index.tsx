@@ -1,1 +1,2 @@
-export * from "./columnPageData"
+export * from "./columnPageData";
+export * from "./recordPageData";
