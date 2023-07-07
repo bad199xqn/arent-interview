@@ -69,10 +69,10 @@ export function RecordChart() {
         <p className="text-[1.375rem] text-light">2021.05.21</p>
       </div>
       <div className="px-[1.625rem] text-xs mb-2">
-        <ResponsiveContainer width="100%" height={200}>
+        <ResponsiveContainer width="100%" height={204}>
           <LineChart
             width={500}
-            height={200}
+            height={204}
             data={data}
             margin={{
               top: 10,

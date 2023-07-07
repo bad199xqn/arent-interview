@@ -48,3 +48,126 @@ export const recordListData = [
     content: "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"
   }
 ] 
+
+export const exerciseListData = [
+  {
+    id:1,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:2,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:3,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:4,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:5,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:6,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:7,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:8,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:9,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:10,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:11,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:12,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:13,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:14,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:15,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:16,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:17,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:18,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:19,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  },
+  {
+    id:20,
+    exercise: "家事全般（立位・軽い）",
+    duration: "10 min",
+    kcal: 26
+  }
+]
