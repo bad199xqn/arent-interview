@@ -1,6 +1,6 @@
 import "@/styles/tailwind.css";
 import "@/styles/scrollBar.css";
-import { MyPage } from "@/pages";
+import { MyPage, RecordPage } from "@/pages";
 
 function App() {
 

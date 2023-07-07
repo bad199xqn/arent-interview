@@ -1,21 +1,7 @@
 import { classNames } from "@/utils";
-import { LineChart, Line, XAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import { ChartButtonGroupPropsType } from "./types";
-
-const data = [
-  { name: '1月', kcal: 2190, duration: 3600 },
-  { name: '2月', kcal: 2090, duration: 3900 },
-  { name: '3月', kcal: 2000, duration: 3700 },
-  { name: '4月' },
-  { name: '5月', kcal: 1890, duration: 3500 },
-  { name: '6月', kcal: 2390, duration: 3800 },
-  { name: '7月', kcal: 2290, duration: 3700 },
-  { name: '8月', kcal: 2100, duration: 3300 },
-  { name: '9月' },
-  { name: '10月', kcal: 1890, duration: 3900 },
-  { name: '11月', kcal: 2390, duration: 3200 },
-  { name: '12月', kcal: 1990, duration: 3700 },
-];
+import { KcalChart } from "@/components/KcalChart";
+import { kcalChartData } from "@/mock";
 
 const chartButtonGroup = [
   { id: 1, title: "日", isActive: false },
@@ -24,24 +10,7 @@ const chartButtonGroup = [
   { id: 4, title: "年", isActive: false },
 ]
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function CustomTick(props: any) {
-  const { x, y, payload } = props;
 
-  return (
-    <g transform={`translate(${x},${y})`}>
-      <text
-        x={0}
-        y={0}
-        dy={16}
-        textAnchor="middle"
-        fill="#fff"
-      >
-        {payload.value}
-      </text>
-    </g>
-  );
-}
 
 function ChartButtonGroup({buttonGroupData}:ChartButtonGroupPropsType) {
   return (
@@ -69,39 +38,7 @@ export function RecordChart() {
         <p className="text-[1.375rem] text-light">2021.05.21</p>
       </div>
       <div className="px-[1.625rem] text-xs mb-2">
-        <ResponsiveContainer width="100%" height={204}>
-          <LineChart
-            width={500}
-            height={204}
-            data={data}
-            margin={{
-              top: 10,
-              right: 12,
-              left: 12,
-              bottom: 0
-            }}
-          >
-            <CartesianGrid horizontal={false} />
-            <XAxis dataKey="name" interval="preserveStartEnd" axisLine={false} tick={CustomTick} />
-            <Tooltip />
-            <Line
-              connectNulls
-              type="linear"
-              dataKey="duration"
-              stroke="#FFFFFF"
-              fill="#FFFFFF"
-              strokeWidth={3}
-            />
-            <Line
-              connectNulls
-              type="linear"
-              dataKey="kcal"
-              stroke="#FFCC21"
-              fill="#FFCC21"
-              strokeWidth={3}
-            />
-          </LineChart>
-        </ResponsiveContainer>
+        <KcalChart data={kcalChartData} />
       </div>
       <ChartButtonGroup buttonGroupData={chartButtonGroup}/>
     </div>

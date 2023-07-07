@@ -10,7 +10,7 @@ export function DefaultLayout(props: DefaultLayoutPropsType) {
       <div className="min-h-full">
         <Header />
         <main className="relative">
-          <div className="mx-auto xl:max-w-[60rem] pb-16">{children}</div>
+          {children}
           <div className="fixed bottom-10 right-24 z-[1000]">
             <GoTopButton />
           </div>

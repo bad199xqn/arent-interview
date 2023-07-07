@@ -4,6 +4,8 @@ import {
   InfoIcon,
   MenuIcon,
   RecordIcon,
+  KnifeIcon,
+  CupIcon
 } from "@/components/Icons";
 import React from "react";
 
@@ -100,5 +102,32 @@ export const RECORD_PAGE_NAVIGATE_BUTTONS = [
     jpTitle: "自分の日記",
     image: RecommendImg3,
     direct: "",
+  },
+];
+
+export const MEAL_BUTTON_GROUP = [
+  {
+    name: "Morning",
+    href: "#",
+    icon: React.createElement(KnifeIcon),
+    current: true,
+  },
+  {
+    name: "Morning",
+    href: "#",
+    icon: React.createElement(KnifeIcon),
+    current: false,
+  },
+  {
+    name: "Morning",
+    href: "#",
+    icon: React.createElement(KnifeIcon),
+    current: false,
+  },
+  {
+    name: "Snack",
+    href: "#",
+    icon: React.createElement(CupIcon),
+    current: false,
   },
 ];

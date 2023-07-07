@@ -8,7 +8,7 @@ export function ColumnPage() {
   return (
     <>
       <DefaultLayout>
-        <div className="w-full">
+        <div className="mx-auto xl:max-w-[60rem] pb-16">
           <ColumnNavButton />
           <ColumnPostGrid postList={postListData} />
           <div className="mt-[1.625rem] text-center">

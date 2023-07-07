@@ -9,7 +9,7 @@ export function RecordPage() {
   return (
     <>
       <DefaultLayout>
-        <div className="w-full">
+        <div className="mx-auto xl:max-w-[60rem] pb-16">
           <div className="flex flex-col gap-y-14 mt-14">
             <RecordNavButton />
             <RecordChart />
