@@ -1,13 +1,14 @@
 import "@/styles/tailwind.css";
 import "@/styles/scrollBar.css";
-import { RecordPage } from "@/pages";
+import { MyPage } from "@/pages";
 
 function App() {
 
   return (
     <>
       {/* <ColumnPage /> */}
-      <RecordPage />
+      {/* <RecordPage /> */}
+      <MyPage />
     </>
   )
 }

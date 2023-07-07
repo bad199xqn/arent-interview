@@ -13,6 +13,8 @@ import RecommendImg3 from "../assets/images/MyRecommend-3.png";
 
 export const DATETIME_FORMAT = "YYYY.MM.DD HH:mm";
 
+export const MONTH_YEAR_FORMAT = "MM.YY";
+
 export const FOOTER_ITEMS = [
   { name: "会員登録", href: "#" },
   { name: "運営会社", href: "#" },
