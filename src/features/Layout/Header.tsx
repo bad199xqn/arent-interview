@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MENU, MENU_NAVIGATION, NAVIGATION } from "@/constants";
 import { classNames } from "@/utils";
 import { LogoIcon } from "@/components/Icons";
+import { NavLink, Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -13,25 +14,28 @@ export function Header() {
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <LogoIcon />
+                  <Link to="/my-page">
+                    <LogoIcon />
+                  </Link>
                 </div>
               </div>
               <div className="hidden md:block">
                 <div className="ml-4 flex items-center md:ml-6">
                   <div className="ml-10 mr-8 flex items-baseline space-x-4">
                     {NAVIGATION.map((item) => (
-                      <a
+                      <NavLink
+                        to={item.href}
                         key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? "text-primary-500" : "text-light",
-                          "rounded-md px-3 py-2 text-base flex items-center gap-2 hover:underline"
-                        )}
-                        aria-current={item.current ? "page" : undefined}
+                        className={({ isActive }) =>
+                          classNames(
+                            isActive ? "text-primary-500" : "text-light",
+                            "rounded-md px-3 py-2 text-base flex items-center gap-2 hover:underline"
+                          )
+                        }
                       >
                         {item.icon}
                         {item.name}
-                      </a>
+                      </NavLink>
                     ))}
                   </div>
 
@@ -57,15 +61,15 @@ export function Header() {
                             {MENU_NAVIGATION.map((item) => (
                               <Menu.Item key={item.name}>
                                 {({ active }) => (
-                                  <a
-                                    href={item.href}
-                                    className={classNames(
-                                      active ? "text-primary-400" : "",
+                                  <NavLink
+                                    to={item.href}
+                                    className={({isActive}) => classNames(
+                                      active || isActive ? "text-primary-400" : "",
                                       "block px-8 py-[1.375rem] text-[1.125rem] text-light border-b border-b-grayArent-500 border-t border-t-grayArent-300 hover:underline"
                                     )}
                                   >
                                     {item.name}
-                                  </a>
+                                  </NavLink>
                                 )}
                               </Menu.Item>
                             ))}
@@ -111,9 +115,7 @@ export function Header() {
             </div>
             <div className="border-t border-gray-700 pb-3 pt-4">
               <div className="flex items-center px-5">
-                <div className="flex-shrink-0">
-                  {MENU.icon}
-                </div>
+                <div className="flex-shrink-0">{MENU.icon}</div>
                 <button
                   type="button"
                   className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"

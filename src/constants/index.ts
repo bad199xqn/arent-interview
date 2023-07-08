@@ -5,7 +5,7 @@ import {
   MenuIcon,
   RecordIcon,
   KnifeIcon,
-  CupIcon
+  CupIcon,
 } from "@/components/Icons";
 import React from "react";
 
@@ -34,31 +34,31 @@ export const MENU = {
 export const NAVIGATION = [
   {
     name: "自分の記録",
-    href: "#",
+    href: "/record",
     icon: React.createElement(RecordIcon),
     current: true,
   },
   {
     name: "チャレンジ",
-    href: "#",
+    href: "/",
     icon: React.createElement(ChallengeIcon),
     current: false,
   },
   {
     name: "お知らせ",
-    href: "#",
+    href: "/",
     icon: React.createElement(InfoIcon),
     current: false,
   },
 ];
 
 export const MENU_NAVIGATION = [
-  { name: "自分の記録", href: "#" },
-  { name: "体重グラフ", href: "#" },
-  { name: "目標", href: "#" },
-  { name: "選択中のコース", href: "#" },
-  { name: "コラム一覧", href: "#" },
-  { name: "設定", href: "#" },
+  { name: "自分の記録", href: "/record" },
+  { name: "体重グラフ", href: "/" },
+  { name: "目標", href: "/" },
+  { name: "選択中のコース", href: "/" },
+  { name: "コラム一覧", href: "/column" },
+  { name: "設定", href: "/" },
 ];
 
 export const COLUMN_PAGE_NAVIGATE_BUTTONS = [
@@ -86,22 +86,22 @@ export const COLUMN_PAGE_NAVIGATE_BUTTONS = [
 
 export const RECORD_PAGE_NAVIGATE_BUTTONS = [
   {
+    id: "body-record",
     engTitle: "BODY RECORD",
     jpTitle: "自分のカラダの記録",
     image: RecommendImg1,
-    direct: "",
   },
   {
+    id: "my-exercise",
     engTitle: "MY EXERCISE",
     jpTitle: "自分の運動の記録",
     image: RecommendImg2,
-    direct: "",
   },
   {
+    id: "my-diary",
     engTitle: "MY DIARY",
     jpTitle: "自分の日記",
     image: RecommendImg3,
-    direct: "",
   },
 ];
 

@@ -1,5 +1,4 @@
 import { LoadMoreButton } from "@/components/LoadMoreButton";
-import { DefaultLayout } from "@/features/Layout";
 import { MainStatistics } from "@/features/MainStatistics";
 import { MealButtonGroup } from "@/features/MealButtonGroup";
 import { MealGrid } from "@/features/MealGrid";
@@ -7,7 +6,6 @@ import { MealGrid } from "@/features/MealGrid";
 export function MyPage() {
   return (
     <>
-      <DefaultLayout>
         <div className="mx-auto xl:max-w-7xl pb-16">
           <MainStatistics />
           <div className="mx-auto xl:max-w-[60rem] mt-[1.375rem]">
@@ -20,7 +18,6 @@ export function MyPage() {
             </div>
           </div>
         </div>
-      </DefaultLayout>
     </>
   );
 }

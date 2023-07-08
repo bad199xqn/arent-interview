@@ -1,5 +1,6 @@
 import { exerciseListData } from "@/mock"
 import { ExerciseType } from "./types"
+import { RECORD_PAGE_NAVIGATE_BUTTONS } from "@/constants"
 
 function ExerciseItem(props: ExerciseType) {
   const {itemKey, exercise, duration, kcal} = props
@@ -19,7 +20,7 @@ function ExerciseItem(props: ExerciseType) {
 
 export function RecordExercise() {
   return (
-    <div className="w-full bg-dark-500 px-6 py-4">
+    <div className="w-full bg-dark-500 px-6 py-4" id={RECORD_PAGE_NAVIGATE_BUTTONS[1]?.id}>
       <div className="flex">
         <p className="text-[15px] w-24 h-9 text-light leading-[18px]">MY EXERCISE</p>
         <p className="text-[1.375rem] text-light">2021.05.21</p>

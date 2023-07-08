@@ -2,6 +2,7 @@ import { classNames } from "@/utils";
 import { ChartButtonGroupPropsType } from "./types";
 import { KcalChart } from "@/components/KcalChart";
 import { kcalChartData } from "@/mock";
+import { RECORD_PAGE_NAVIGATE_BUTTONS } from "@/constants";
 
 const chartButtonGroup = [
   { id: 1, title: "日", isActive: false },
@@ -9,8 +10,6 @@ const chartButtonGroup = [
   { id: 3, title: "月", isActive: true },
   { id: 4, title: "年", isActive: false },
 ]
-
-
 
 function ChartButtonGroup({buttonGroupData}:ChartButtonGroupPropsType) {
   return (
@@ -32,7 +31,7 @@ function ChartButtonGroup({buttonGroupData}:ChartButtonGroupPropsType) {
 
 export function RecordChart() {
   return (
-    <div className="w-full bg-dark-500 px-6 py-4">
+    <div className="w-full bg-dark-500 px-6 py-4" id={RECORD_PAGE_NAVIGATE_BUTTONS[0]?.id}>
       <div className="flex">
         <p className="text-[15px] w-24 h-9 text-light leading-[18px]">BODY RECORD</p>
         <p className="text-[1.375rem] text-light">2021.05.21</p>
