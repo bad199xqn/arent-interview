@@ -6,7 +6,7 @@ export type RecordType = {
 }
 
 export type DiaryGridPropsType = {
-  postList: RecordType[]
+  diaryList: RecordType[]
 }
 
 export type RecordCardPropsType = {

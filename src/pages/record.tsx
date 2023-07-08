@@ -1,23 +1,59 @@
+import { useState, useEffect } from "react";
 import { LoadMoreButton } from "@/components/LoadMoreButton";
-import { DiaryGrid } from "@/features/DiaryGrid";
+import { DiaryGrid, RecordType } from "@/features/DiaryGrid";
 import { RecordChart } from "@/features/RecordChart";
 import { RecordExercise } from "@/features/RecordExercise";
 import { RecordNavButton } from "@/features/RecordNavButton";
+import { recordListData } from "@/mock";
 import { scrollToElementById } from "@/utils";
 
+const getDiarys = (pageSize: number, pageNumber: number) => {
+  const data = recordListData;
+  const dataSize = data.length;
+  const startIndex = pageSize * (pageNumber - 1);
+  const endIndex =
+    startIndex + pageSize < dataSize ? startIndex + pageSize - 1 : dataSize - 1;
+  if (startIndex <= endIndex) {
+    return data.filter(
+      (_item, index) => index >= startIndex && index <= endIndex
+    );
+  }
+
+  return [];
+};
+
 export function RecordPage() {
+  const [diaryList, setDiaryList] = useState<RecordType[]>([]);
+  const [diaryPage, setDiaryPage] = useState(1);
+  const diarySize = 8;
+
+  const handleLoadMore = () => {
+    setDiaryPage(page => page + 1)
+  }
+
+  useEffect(() => {
+    const initDiaryList = getDiarys(diarySize, diaryPage);
+    setDiaryList(initDiaryList);
+  }, []);
+
+  useEffect(() => {
+    if (diaryPage > 1) {
+      const moreDiaryList = getDiarys(diarySize, diaryPage);
+      setDiaryList(list => [...list, ...moreDiaryList]);
+    }
+  }, [diaryPage]);
 
   return (
     <>
       <div className="mx-auto xl:max-w-[60rem] pb-16">
         <div className="flex flex-col gap-y-14 mt-14">
-          <RecordNavButton onScroll={scrollToElementById}/>
+          <RecordNavButton onScroll={scrollToElementById} />
           <RecordChart />
           <RecordExercise />
-          <DiaryGrid />
+          <DiaryGrid diaryList={diaryList} />
         </div>
         <div className="mt-[1.625rem] text-center">
-          <LoadMoreButton />
+          <LoadMoreButton onLoadMore={handleLoadMore}/>
         </div>
       </div>
     </>

@@ -12,7 +12,6 @@ const getMeals = (pageSize: number, pageNumber: number, type: string = MEAL_TYPE
   const startIndex = pageSize * (pageNumber - 1);
   const endIndex =
     startIndex + pageSize < dataSize ? startIndex + pageSize - 1 : dataSize - 1;
-    console.log({startIndex:startIndex, endIndex:endIndex});
   if (startIndex <= endIndex) {
     return mealData.filter(
       (_meal, index) => index >= startIndex && index <= endIndex
@@ -46,7 +45,7 @@ export function MyPage() {
     }
   }, [mealType]);
 
-  useMemo(() => {
+  useEffect(() => {
     const mealList = getMeals(mealPageSize, mealPage, mealType);
     if (mealPage > 1) {
       setMealData(meal => [...meal, ...mealList]);
