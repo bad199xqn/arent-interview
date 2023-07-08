@@ -5,9 +5,17 @@ import { MealButtonGroup } from "@/features/MealButtonGroup";
 import { MealGrid, MealType } from "@/features/MealGrid";
 import { mealListData } from "@/mock";
 import { MEAL_TYPE } from "@/constants";
+import { PrivateView } from "@/features/Layout";
 
-const getMeals = (pageSize: number, pageNumber: number, type: string = MEAL_TYPE[4]) => {
-  const mealData = type !== MEAL_TYPE[4] ? mealListData.filter((meal) => meal.type === type) : mealListData;
+const getMeals = (
+  pageSize: number,
+  pageNumber: number,
+  type: string = MEAL_TYPE[4]
+) => {
+  const mealData =
+    type !== MEAL_TYPE[4]
+      ? mealListData.filter((meal) => meal.type === type)
+      : mealListData;
   const dataSize = mealData.length;
   const startIndex = pageSize * (pageNumber - 1);
   const endIndex =
@@ -31,8 +39,8 @@ export function MyPage() {
   };
 
   const handleLoadMore = () => {
-    setMealPage(page => page + 1)
-  }
+    setMealPage((page) => page + 1);
+  };
 
   useEffect(() => {
     const mealList = getMeals(mealPageSize, mealPage);
@@ -48,27 +56,28 @@ export function MyPage() {
   useEffect(() => {
     const mealList = getMeals(mealPageSize, mealPage, mealType);
     if (mealPage > 1) {
-      setMealData(meal => [...meal, ...mealList]);
-    }
-    else {
+      setMealData((meal) => [...meal, ...mealList]);
+    } else {
       setMealData(mealList);
     }
   }, [mealPage, mealType]);
 
   return (
     <>
-      <div className="mx-auto xl:max-w-7xl pb-16">
-        <MainStatistics />
-        <div className="mx-auto xl:max-w-[60rem] mt-[1.375rem]">
-          <div className="flex flex-col gap-y-6">
-            <MealButtonGroup onFilter={handleMealFilter} />
-            <MealGrid mealList={mealData} />
-          </div>
-          <div className="mt-[1.625rem] text-center">
-            <LoadMoreButton onLoadMore={handleLoadMore}/>
+      <PrivateView>
+        <div className="mx-auto xl:max-w-7xl pb-16">
+          <MainStatistics />
+          <div className="mx-auto xl:max-w-[60rem] mt-[1.375rem]">
+            <div className="flex flex-col gap-y-6">
+              <MealButtonGroup onFilter={handleMealFilter} />
+              <MealGrid mealList={mealData} />
+            </div>
+            <div className="mt-[1.625rem] text-center">
+              <LoadMoreButton onLoadMore={handleLoadMore} />
+            </div>
           </div>
         </div>
-      </div>
+      </PrivateView>
     </>
   );
 }

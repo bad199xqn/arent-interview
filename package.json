@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@hookform/resolvers": "^3.1.1",
+    "@loadable/component": "^5.15.3",
     "@reduxjs/toolkit": "^1.9.5",
     "dayjs": "^1.11.9",
     "react": "^18.2.0",
@@ -25,6 +26,7 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@types/loadable__component": "^5.13.4",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
