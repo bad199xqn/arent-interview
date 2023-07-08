@@ -10,7 +10,7 @@ export function MealCard(props: MealCardPropsType) {
       <div className="card-image h-full bg-red-100 relative">
         <LazyImage width={234} height={144} src={image} />
         <div className="post-time w-[120px] h-[32px] absolute z-1 bottom-0 left-0 p-2 bg-primary-300 flex items-center">
-            <p className="text-light text-[15px]">{`${convertDateTimezoneLocal(time, MONTH_YEAR_FORMAT)}.${type}`}</p>
+            <p className="text-light text-[15px] font-inter">{`${convertDateTimezoneLocal(time, MONTH_YEAR_FORMAT)}.${type}`}</p>
         </div>
       </div>
     </div>

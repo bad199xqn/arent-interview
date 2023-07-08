@@ -1,4 +1,4 @@
-import "@/styles/tailwind.css";
+import "@/styles/index.css";
 import "@/styles/scrollBar.css";
 import { ColumnPage, MyPage, RecordPage } from "@/pages";
 import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";

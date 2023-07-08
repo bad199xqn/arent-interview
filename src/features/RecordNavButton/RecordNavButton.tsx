@@ -13,7 +13,7 @@ export function RecordNavButton(props:RecordNavButtonPropsType) {
           onClick={() => onScroll(button.id)}
         >
           <div className="h-full w-full flex flex-col justify-center items-center bg-dark-600" style={{ backgroundImage: `url(${button.image})` }}>
-            <p className="line-clamp-2 text-[1.5625rem] leading-7 text-primary-300">{button.engTitle}</p>
+            <p className="line-clamp-2 text-[1.5625rem] leading-7 text-primary-300 font-inter">{button.engTitle}</p>
             <div className="text-center bg-primary-400 w-40 h-5 mt-3">
               <p className="text-light text-[1.125rem] text-sm">{button.jpTitle}</p>
             </div>

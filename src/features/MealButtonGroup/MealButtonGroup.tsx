@@ -34,7 +34,7 @@ export function MealButtonGroup(props: MealButtonGroupPropsType) {
           </svg>
           <div className="absolute top-0 w-full h-full flex flex-col items-center justify-center gap-1">
             {btn.icon}
-            <p className="text-light text-xl">{btn.name}</p>
+            <p className="text-light text-xl font-inter">{btn.name}</p>
           </div>
         </div>
       ))}

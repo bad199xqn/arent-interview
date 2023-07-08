@@ -1,8 +1,8 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
 const data = [
-  { name: "Group A", value: 80 },
-  { name: "Group B", value: 20 },
+  { name: "Kcal", value: 80 },
+  { name: "Rest", value: 20 },
 ];
 const COLORS = ["#fff", "none"];
 
@@ -32,7 +32,7 @@ export function PercentChart() {
           </Pie>
         </PieChart>
       </ResponsiveContainer>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[6.375rem] h-[1.875rem] text-light flex items-end gap-0.5">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[6.375rem] h-[1.875rem] text-light flex items-end gap-0.5 font-inter">
         <p className="text-lg leading-none">{`05/21`}</p>
         <p className="text-[1.5625rem] leading-none">{`${data[0].value}%`}</p>
       </div>

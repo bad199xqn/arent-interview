@@ -32,7 +32,7 @@ function ChartButtonGroup({buttonGroupData}:ChartButtonGroupPropsType) {
 export function RecordChart() {
   return (
     <div className="w-full bg-dark-500 px-6 py-4" id={RECORD_PAGE_NAVIGATE_BUTTONS[0]?.id}>
-      <div className="flex">
+      <div className="flex font-inter">
         <p className="text-[15px] w-24 h-9 text-light leading-[18px]">BODY RECORD</p>
         <p className="text-[1.375rem] text-light">2021.05.21</p>
       </div>
