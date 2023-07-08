@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="readme_images/logo.jpg" alt="Logo" width="212" height="80">
   </a>
 
   <h3 align="center">HealthApp By Bui Anh Duc</h3>
@@ -72,16 +72,13 @@ Locally preview the production build at http://localhost:4173/
     - [ ] English
     - [ ] Japanese
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## App Details
 
 
 ### Navigation Bar and Menu
-[![Product Name Screen Shot][product-screenshot]]()
+[![Nav-menu Screen Shot][Nav-menu]]()
 
 * Click on the logo to navigate to the Top page
 * Highlight the item with an active link
@@ -89,7 +86,7 @@ Locally preview the production build at http://localhost:4173/
 
 
 ### Top page
-[![Product Name Screen Shot][product-screenshot]]()
+[![Top-page Screen Shot][Top-page]]()
 
 * Date－Achievement rate
 * Body weight - Body fat percentage graph
@@ -100,7 +97,7 @@ Locally preview the production build at http://localhost:4173/
 
 
 ### My Record page
-[![Product Name Screen Shot][product-screenshot]]()
+[![Record-page Screen Shot][Record-page]]()
 
 * Scroll to the "BODY RECORD," "MY EXERCISE," and "MY DIARY" sections
 * Body fat percentage graph
@@ -111,14 +108,14 @@ Locally preview the production build at http://localhost:4173/
 
 
 ### Column page
-[![Product Name Screen Shot][product-screenshot]]()
+[![Column-page Screen Shot][Column-page]]()
 
 * Button to load more recommends
 * Button to scroll to the top of the page
 
 
 ### Authentication
-[![Product Name Screen Shot][product-screenshot]]()
+[![Login-modal Screen Shot][Login-modal]]()
 
 * Form validation
 * Authentication error message
@@ -127,6 +124,10 @@ Locally preview the production build at http://localhost:4173/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[product-screenshot]: images/screenshot.png
+[Nav-menu]: readme_images/navbar-menu.png
+[Top-page]: readme_images/Top-page.png
+[Record-page]: readme_images/Record-page.png
+[Column-page]: readme_images/Column-page.png
+[Login-modal]: readme_images/Login-modal.png
 
 
