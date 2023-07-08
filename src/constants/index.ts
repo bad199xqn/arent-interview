@@ -105,29 +105,23 @@ export const RECORD_PAGE_NAVIGATE_BUTTONS = [
   },
 ];
 
+export const MEAL_TYPE = ["Morning", "Lunch", "Dinner", "Snack", "all"]
+
 export const MEAL_BUTTON_GROUP = [
   {
-    name: "Morning",
-    href: "#",
+    name: MEAL_TYPE[0],
     icon: React.createElement(KnifeIcon),
-    current: true,
   },
   {
-    name: "Morning",
-    href: "#",
+    name: MEAL_TYPE[1],
     icon: React.createElement(KnifeIcon),
-    current: false,
   },
   {
-    name: "Morning",
-    href: "#",
+    name: MEAL_TYPE[2],
     icon: React.createElement(KnifeIcon),
-    current: false,
   },
   {
-    name: "Snack",
-    href: "#",
+    name: MEAL_TYPE[3],
     icon: React.createElement(CupIcon),
-    current: false,
   },
 ];

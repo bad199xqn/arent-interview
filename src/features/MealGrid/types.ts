@@ -2,7 +2,8 @@ export type MealType = {
   id: number, 
   name: string,
   time: string,
-  image: string
+  image: string,
+  type: string
 }
 
 export type MealGridPropsType = {
@@ -14,5 +15,6 @@ export type MealCardPropsType = {
   name: string,
   time: string,
   cardKey: string,
-  image: string
+  image: string,
+  type: string
 }

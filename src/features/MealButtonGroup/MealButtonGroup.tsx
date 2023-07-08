@@ -1,10 +1,12 @@
 import { MEAL_BUTTON_GROUP } from "@/constants";
+import { MealButtonGroupPropsType } from "./types";
 
-export function MealButtonGroup() {
+export function MealButtonGroup(props: MealButtonGroupPropsType) {
+  const { onFilter } = props;
   return (
     <div className="w-full flex gap-x-[5.25rem] justify-center">
       {MEAL_BUTTON_GROUP.map((btn) => (
-        <div className="relative">
+        <div className="relative cursor-pointer" onClick={() => onFilter(btn.name)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={116}
