@@ -5,6 +5,7 @@ import { MealButtonGroup } from "@/features/MealButtonGroup";
 import { MealGrid, MealType } from "@/features/MealGrid";
 import { mealListData } from "@/mock";
 import { MEAL_TYPE } from "@/constants";
+import { LoginModal } from "@/features/LoginModal";
 
 const getMeals = (pageSize: number, pageNumber: number, type: string = MEAL_TYPE[4]) => {
   const mealData = type !== MEAL_TYPE[4] ? mealListData.filter((meal) => meal.type === type) : mealListData;
@@ -68,6 +69,7 @@ export function MyPage() {
             <LoadMoreButton onLoadMore={handleLoadMore}/>
           </div>
         </div>
+        <LoginModal isOpen={true} />
       </div>
     </>
   );

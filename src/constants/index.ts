@@ -34,31 +34,33 @@ export const MENU = {
 export const NAVIGATION = [
   {
     name: "自分の記録",
+    enName: "record",
     href: "/record",
     icon: React.createElement(RecordIcon),
     current: true,
   },
   {
     name: "チャレンジ",
-    href: "/",
+    enName: "badge",
+    href: "*",
     icon: React.createElement(ChallengeIcon),
     current: false,
   },
   {
     name: "お知らせ",
-    href: "/",
+    enName: "info",
+    href: "*",
     icon: React.createElement(InfoIcon),
-    current: false,
   },
 ];
 
 export const MENU_NAVIGATION = [
   { name: "自分の記録", href: "/record" },
-  { name: "体重グラフ", href: "/" },
-  { name: "目標", href: "/" },
-  { name: "選択中のコース", href: "/" },
+  { name: "体重グラフ", href: "*", },
+  { name: "目標", href: "*", },
+  { name: "選択中のコース", href: "*", },
   { name: "コラム一覧", href: "/column" },
-  { name: "設定", href: "/" },
+  { name: "設定", href: "*", },
 ];
 
 export const COLUMN_PAGE_NAVIGATE_BUTTONS = [

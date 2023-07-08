@@ -29,12 +29,17 @@ export function Header() {
                         className={({ isActive }) =>
                           classNames(
                             isActive ? "text-primary-500" : "text-light",
-                            "rounded-md px-3 py-2 text-base flex items-center gap-2 hover:underline"
+                            "rounded-md px-3 py-2 text-base flex items-center gap-2 hover:underline relative"
                           )
                         }
                       >
                         {item.icon}
                         {item.name}
+                        {item.enName === NAVIGATION[2].enName && (
+                          <div className="absolute top-1.5 left-8 w-4 h-4 rounded-full bg-[#EA6C00] flex justify-center items-center">
+                            <p className="text-[0.625rem] text-light leading-none">1</p>
+                          </div>
+                        )}
                       </NavLink>
                     ))}
                   </div>
@@ -63,10 +68,14 @@ export function Header() {
                                 {({ active }) => (
                                   <NavLink
                                     to={item.href}
-                                    className={({isActive}) => classNames(
-                                      active || isActive ? "text-primary-400" : "",
-                                      "block px-8 py-[1.375rem] text-[1.125rem] text-light border-b border-b-grayArent-500 border-t border-t-grayArent-300 hover:underline"
-                                    )}
+                                    className={({ isActive }) =>
+                                      classNames(
+                                        active || isActive
+                                          ? "text-primary-400"
+                                          : "",
+                                        "block px-8 py-[1.375rem] text-[1.125rem] text-light border-b border-b-grayArent-500 border-t border-t-grayArent-300 hover:underline"
+                                      )
+                                    }
                                   >
                                     {item.name}
                                   </NavLink>
