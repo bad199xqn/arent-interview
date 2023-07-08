@@ -16,5 +16,4 @@ export type PostCardPropsType = {
   title: string,
   time: string,
   tags: string[],
-  cardKey: string
 }

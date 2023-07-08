@@ -14,7 +14,6 @@ export type MealCardPropsType = {
   id: number, 
   name: string,
   time: string,
-  cardKey: string,
   image: string,
   type: string
 }

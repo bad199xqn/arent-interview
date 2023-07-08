@@ -6,7 +6,11 @@ export function MealButtonGroup(props: MealButtonGroupPropsType) {
   return (
     <div className="w-full flex gap-x-[5.25rem] justify-center">
       {MEAL_BUTTON_GROUP.map((btn) => (
-        <div className="relative cursor-pointer" onClick={() => onFilter(btn.name)}>
+        <div
+          className="relative cursor-pointer"
+          onClick={() => onFilter(btn.name)}
+          key={`btn-filter-${btn.name}`}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={116}

@@ -13,6 +13,5 @@ export type RecordCardPropsType = {
   id: number, 
   title: string,
   time: string,
-  cardKey: string,
   content: string
 }
